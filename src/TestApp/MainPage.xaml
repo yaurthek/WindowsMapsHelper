@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="TestApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TestApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Button Content="Show Map" Margin="39,35,0,695" Tapped="ButtonMapTapped"/>
+        <Button Content="Show Toronto downtown map" Margin="39,101,0,629" Tapped="ButtonMapOptionsTapped"/>
+        <Button Content="Search tea places in London, UK" Margin="39,167,0,563" Tapped="ButtonSearchTapped"/>
+        <Button Content="Search route from Montreal to Ottawa" Margin="39,233,0,497" Tapped="ButtonSearchRouteTapped"/>
+        <Button Content="Search route to LAX airport" Margin="39,302,0,428" Tapped="ButtonSearchRouteToTapped"/>
+    </Grid>
+</Page>
