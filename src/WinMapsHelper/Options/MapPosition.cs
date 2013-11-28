@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace WindowsMapsHelper
 {
@@ -25,7 +26,7 @@ namespace WindowsMapsHelper
 
         private string FormatCoordinates(string prefix, string delimeter)
         {
-            return String.Format("{0}{1:0.000000}{2}{3:0.000000}", prefix, Latitude, delimeter, Longitude);
+            return String.Format(CultureInfo.InvariantCulture, "{0}{1:0.000000}{2}{3:0.000000}", prefix, Latitude, delimeter, Longitude);
         }
 
     }
