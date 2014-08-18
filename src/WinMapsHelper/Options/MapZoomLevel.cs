@@ -16,7 +16,7 @@ namespace WindowsMapsHelper
         public MapZoomLevel(double zoomLevel)
         {
             if (zoomLevel < 1 || zoomLevel > 20)
-                throw new Exception("Zoom level is out of range (1-20)");
+                throw new ArgumentOutOfRangeException("Zoom level is out of range (1-20)");
 
             ZoomLevel = zoomLevel;
         }
