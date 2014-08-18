@@ -45,3 +45,5 @@ Windows 8 Maps app protocol helper
 
     await MapsHelper.SearchDirectionsAsync(null, 
                         new MapPosition(33.943538, -118.40812), null);
+
+P.S. Here is the official documentation of the protocol: http://msdn.microsoft.com/en-us/library/windows/apps/jj635237.aspx
