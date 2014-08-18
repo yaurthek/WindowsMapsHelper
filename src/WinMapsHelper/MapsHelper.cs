@@ -103,17 +103,17 @@ namespace WindowsMapsHelper
         private async static Task<bool> LaunchMapApp(string parameters)
         {
             var trimmedParams = parameters.Trim(new[] { '&' });
-            var uri = String.IsNullOrWhiteSpace(trimmedParams) ? 
-                        new Uri(_protocolUrl) : 
+            var uri = String.IsNullOrWhiteSpace(trimmedParams) ?
+                        new Uri(_protocolUrl) :
                         new Uri(String.Concat(_protocolUrl, "?", trimmedParams));
 
             return await Launcher.LaunchUriAsync(uri);
         }
 
         private static string OptionsToString(MapOptions options)
-        { 
+        {
             var sb = new StringBuilder();
-            
+
             if (options.CenterPoint != null)
             {
                 sb.AppendFormat("cp={0}", options.CenterPoint.ToPointString());
@@ -124,14 +124,14 @@ namespace WindowsMapsHelper
                 sb.AppendFormat("&lvl={0:0.00}", options.ZoomLevel.ZoomLevel);
             }
 
-            if (options.BoundingBox != null && 
-                options.BoundingBox.LowerLeftCorner!= null && 
-                options.BoundingBox.UpperRightCorner!= null)
+            if (options.BoundingBox != null &&
+                options.BoundingBox.LowerLeftCorner != null &&
+                options.BoundingBox.UpperRightCorner != null)
             {
-                sb.AppendFormat("&bb={0}_{1}~{2}_{3}", 
-                                options.BoundingBox.LowerLeftCorner.Latitude, 
+                sb.AppendFormat("&bb={0}_{1}~{2}_{3}",
+                                options.BoundingBox.LowerLeftCorner.Latitude,
                                 options.BoundingBox.LowerLeftCorner.Longitude,
-                                options.BoundingBox.UpperRightCorner.Latitude, 
+                                options.BoundingBox.UpperRightCorner.Latitude,
                                 options.BoundingBox.UpperRightCorner.Longitude);
             }
 
@@ -143,9 +143,9 @@ namespace WindowsMapsHelper
             if (options.ShowTraffic)
             {
                 sb.Append("&trfc=1");
-            }            
+            }
 
-            return sb.ToString().TrimStart(new[]{'&'});
+            return sb.ToString().TrimStart(new[] { '&' });
         }
     }
 }

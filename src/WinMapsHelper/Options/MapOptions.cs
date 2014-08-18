@@ -1,6 +1,11 @@
 ﻿namespace WindowsMapsHelper
 {
-    public enum MapViewStyle { Default, Aerial, Road }
+    public enum MapViewStyle
+    {
+        Default,
+        Aerial,
+        Road,
+    }
 
     public sealed class MapOptions
     {
